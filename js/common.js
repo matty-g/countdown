@@ -11,6 +11,7 @@ var initDate; // date to start the calc from
 var daysDiff;
 var pic;
 var numMsInDays = 1000 * 60 * 60 * 24;
+var counterElement = document.getElementById('counter');
 
 
 function convertMSToDate(msVal){
@@ -45,11 +46,16 @@ function calcTimeRemaining() {
     var present = new Date(); // right now
     var remainingTime = depart - present;
 
+    if (remainingTime < 0) {
+        counterElement.innerHTML = ('Timer Expired!!');
+        return
+    }
+
     // convert milliseconds amount into number of days
     var days_remaining = Math.floor(remainingTime / numMsInDays);
 
     // update label with remaining time
-    document.getElementById('counter').innerHTML = convertMSToDate(remainingTime);
+    counterElement.innerHTML = convertMSToDate(remainingTime);
 
     // calculate opacity of image based on remaining time
     var opacity = 1/(daysDiff/(daysDiff - (daysDiff - (present-initDate))));
