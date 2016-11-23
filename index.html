@@ -3,12 +3,16 @@
 <head>
 	<title>Weekend begins in...</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script rel="script" type="text/javascript" src="js/common.js"></script>
 	<script>
 
         window.onload = (function() {
             init();
             myInterval = setInterval(calcTimeRemaining, 1000);
             pic = document.querySelector("#bg");
+            if (pic.style.opacity > 1) {
+                clearInterval(myInterval);
+            }
         });
 
 	</script>

@@ -42,7 +42,6 @@ function convertMSToDate(msVal){
 
 function calcTimeRemaining() {
 
-
     var present = new Date(); // right now
     var remainingTime = depart - present;
 
@@ -55,15 +54,8 @@ function calcTimeRemaining() {
     // calculate opacity of image based on remaining time
     var opacity = 1/(daysDiff/(daysDiff - (daysDiff - (present-initDate))));
 
-    console.log(opacity)
-
     pic.style.opacity = opacity;
-
     console.log("img opacity is: " + opacity);
-
-    if (opacity >= 1) {
-        myInterval = 0;
-    }
 
     return;
 
