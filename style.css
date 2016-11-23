@@ -1,0 +1,42 @@
+body {
+    background-color: #27A1FF;
+    width: 960px;
+    height: 960px;
+    vertical-align: middle;
+    margin: auto;
+
+}
+
+
+#mainTimer {
+    position: relative;
+    display: table-cell;
+    top: 20px;
+    width: 720px;
+    height: 960px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #F5FFFE;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 1;
+
+}
+
+#counter {
+    text-shadow: 1px 1px #27A1FF;
+}
+
+#mainTimer #bg {
+    background-color: black;
+    z-index: -1;
+    position: absolute;
+    margin: 4px 4px 4px 4px;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: url("images/family_75.jpg") center center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
